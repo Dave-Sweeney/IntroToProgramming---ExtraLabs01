@@ -30,28 +30,27 @@ namespace IntroToProgramming___ExtraLabs01
             
             
 
-            GenerateGrid(gridSize);
+            GenerateGrid(gridSize, '?', '*');
 
             Console.ReadKey();
         }
 
-        public static void GenerateGrid(int size)
+        public static void GenerateGrid(int size, char first = 'X', char second = 'O')
         {
-            
             for (int i = 0; i < size; i++)
             {
                 for (int j = 0; j < size; j++)
                 {
                     if ((i + j) % 2 == 0)
                     {
-                        Console.Write("X");
+                        Console.Write(first);
                     }
                     else
                     {
-                        Console.Write("O");
+                        Console.Write(second);
                     }
                 }
-                              
+
                 Console.WriteLine();
             }
         }
